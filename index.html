@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <main class="card">
+        <section class="card__header">
+          <h3>Thursday 7th</h3>
+          <h3>Julho 2021</h3>
+        </section>
+        <section class="card__body">
+          <ul class="card__body--days">
+            <li>seg</li>
+            <li>ter</li>
+            <li>qua</li>
+            <li>qui</li>
+            <li>sext</li>
+            <li>sab</li>
+            <li>dom</li>
+          </ul>
+          <ul class="card__body--dates">
+            <button class="prev"  data-toggle="modal" data-target="#myModal"><li>30</li></button>
+            <button class="prev"  data-toggle="modal" data-target="#myModal"><li>31</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>1</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>2</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>3</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>4</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>5</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>6</li></button>
+            <!-- <button>7</button> -->
+           <button class="active"  data-toggle="modal" data-target="#myModal"><li>5</li></button> 
+            <button  data-toggle="modal" data-target="#myModal"><li>7</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>8</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>9</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>10</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>11</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>12</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>13</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>14</li></button>
+            <!-- <button>16</button> -->
+            <button class="circle orange"><li>15</li></button>  
+            <button  data-toggle="modal" data-target="#myModal"><li>16</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>17</li></button>
+            <!-- <button>19</button> -->
+            <button data-toggle="modal" data-target="#myModal"><li>18</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>19</li></button>
+            <button  data-toggle="modal" data-target="#myModal"><li>20</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>21</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>22</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>23</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>24</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>25</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>26</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>27</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>28</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>29</li></button>
+            <button data-toggle="modal" data-target="#myModal"><li>30</li></button>
+            <button class="next"><li>1</li></button>
+            <button class="next"><li>2</li></button>
+          </ul>
+        </section>
+      </main>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Agendar Reunião</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <label for="">Data_reuniao</label>
+                    <input type="date" id="dataReuniao" value="2021-07-12">
+                </div>
+                <div class="modal-body">
+                    <label for="">Sala</label>
+                    <select name="" id="sala" onblur="buscarHorariosPorSala();">
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="7b">7b</option>
+                        <option value="4">4</option>
+                        <option value="Treinamento">Treinamento</option>
+                    </select>
+                </div>
+                <div class="modal-body">
+                    <label for="">hora inicio</label>
+                    <select name="" id="hora_inicio"  onblur="buscarHorariosPorSala();">
+                        <option value="8:00">8:00</option>
+                        <option value="8:15">8:15</option>
+                        <option value="8:30">8:30</option>
+                        <option value="8:45">8:45</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:15">9:15</option>
+                        <option value="9:30">9:30</option>
+                        <option value="9:45">9:45</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:15">10:15</option>
+                        <option value="10:30">10:30</option>
+                        <option value="10:45">10:45</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:15">11:15</option>
+                        <option value="11:30">11:30</option>
+                        <option value="11:45">11:45</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:15">12:15</option>
+                        <option value="12:30">12:30</option>
+                        <option value="12:45">12:45</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:15">13:15</option>
+                        <option value="13:30">13:30</option>
+                        <option value="13:45">13:45</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:15">14:15</option>
+                        <option value="14:30">14:30</option>
+                        <option value="14:45">14:45</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:15">15:15</option>
+                        <option value="15:30">15:30</option>
+                        <option value="15:45">15:45</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:15">16:15</option>
+                        <option value="16:30">16:30</option>
+                        <option value="16:45">16:45</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:15">17:15</option>
+                        <option value="17:30">17:30</option>
+                        <option value="17:45">17:45</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+                <div class="modal-body">
+                    <label for="">hora fim</label>
+                    <select name="" id="hora_fim"  onblur="buscarHorariosPorSala();">
+                        <option value="8:15">8:15</option>
+                        <option value="8:30">8:30</option>
+                        <option value="8:45">8:45</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:15">9:15</option>
+                        <option value="9:30">9:30</option>
+                        <option value="9:45">9:45</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:15">10:15</option>
+                        <option value="10:30">10:30</option>
+                        <option value="10:45">10:45</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:15">11:15</option>
+                        <option value="11:30">11:30</option>
+                        <option value="11:45">11:45</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:15">12:15</option>
+                        <option value="12:30">12:30</option>
+                        <option value="12:45">12:45</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:15">13:15</option>
+                        <option value="13:30">13:30</option>
+                        <option value="13:45">13:45</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:15">14:15</option>
+                        <option value="14:30">14:30</option>
+                        <option value="14:45">14:45</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:15">15:15</option>
+                        <option value="15:30">15:30</option>
+                        <option value="15:45">15:45</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:15">16:15</option>
+                        <option value="16:30">16:30</option>
+                        <option value="16:45">16:45</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:15">17:15</option>
+                        <option value="17:30">17:30</option>
+                        <option value="17:45">17:45</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+                <div class="modal-body">
+                    <label for="">Setor</label>
+                    <select name="" id="setor"  onblur="buscarHorariosPorSala();">
+                        <option value="Produtos">Produtos</option>
+                        <option value="Desenvolvimento">Desenvolvimento</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="RH">RH</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="modal-body">
+                    <label for="">Responsavel</label>
+                    <input type="" id="responsavel"  onblur="buscarHorariosPorSala();">
+                </div>
+                <div class="modal-body">
+                    <label for="">Tema</label>
+                    <input type="" id="tema">
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">horarios já reservados</h4>
+                </div>
+                <div class="modal-body" id="reservados">
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="incluirReuniao();">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="./assets/index.js"></script>
+</body>
+</html>
